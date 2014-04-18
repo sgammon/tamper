@@ -23,6 +23,22 @@ package: build
 
 deps: .Python
 
+clean:
+	@echo "Cleaning py{c,o}'s..."
+	@-find . -name "*.py[c,o]" -exec rm -f {} \;
+
+	@echo "Cleaning build/ and dist/..."
+	@-rm -fr build/ dist/
+
+envclean:
+	@echo "Cleaning virtual environment..."
+	@-rm -fr .Python lib include man
+
+distclean: clean envclean
+	@echo "Resetting codebase..."
+	@-git clean -xdf
+	@-git reset --hard
+
 
 ## == environment == ##
 .Python:
