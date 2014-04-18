@@ -1,7 +1,16 @@
 .DS_Store
 *.gem
+*.pyc
+*.pyo
 .bundle
 Gemfile.lock
 pkg/*
 encoders/ruby/functional_test/output
 clients/js/test/node_modules
+encoders/python/.Python
+encoders/python/lib
+encoders/python/bin
+encoders/python/include
+encoders/python/dist
+encoders/python/build
+encoders/python/tamper.egg-info
